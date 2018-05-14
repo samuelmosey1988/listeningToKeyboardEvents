@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+
+<div id="box"><img src="./image/nyan-cat-08-625x450.jpg"> </div>    
+
+</body>
+<script>
+        
+    let boxTop = 200; 
+    let boxLeft = 200; 
+
+    'use strict';
+    
+    document.addEventListener('keydown', (event) => {
+      const keyName = event.key;
+      // alert('keydown event\n\n' + 'key: ' + keyName);
+    if(keyName === "ArrowRight") {
+        console.log("nyanNinjaCat")
+        boxLeft = boxLeft + 20
+    }
+    else if (keyName === "ArrowUp"){
+        boxTop = boxTop - 10
+    }
+    else if (keyName === "ArrowDown"){
+        boxTop = boxTop + 10
+    }
+    else if (keyName === "ArrowLeft"){
+        boxLeft = boxLeft - 10
+    }
+    else if (keyName === "ArrowRight"){
+        boxLeft = boxLeft - 10
+    }
+    document.getElementById("box").style.top = boxTop + "px"; 
+    document.getElementById("box").style.left = boxLeft + "px"; 
+    });
+    
+    
+    
+
+    </script>
+</html>
